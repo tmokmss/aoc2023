@@ -31,6 +31,6 @@ def around4(x = 0, y = 0)
   [[-1, 0], [0, -1], [0, 1], [1, 0]].map { |dx, dy| [x + dx, y + dy] }
 end
 
-def array2d(width, height, value=0)
+def array2d(width, height, value = 0)
   Array.new(height) { Array.new(width) { value } }
 end

@@ -1,12 +1,12 @@
-require "prettyprint"
-require "set"
-require_relative "./lib"
+require 'prettyprint'
+require 'set'
+require_relative './lib'
 
 input_path = if ARGV.length < 1
-    "input/DAY.txt"
-  else
-    "sample/DAY.txt"
-  end
+               'input/DAY.txt'
+             else
+               'sample/DAY.txt'
+             end
 
 puts "Load input from #{input_path}"
 
