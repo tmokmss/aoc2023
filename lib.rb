@@ -6,7 +6,7 @@
 # 0 0 0 0 0
 # 0 1 2 3 0
 # 0 4 5 6 0
-# 0 0 0 0 0, 3, 2
+# 0 0 0 0 0
 def pad!(matrix, val)
   h = matrix.size
   w = matrix[0].size
