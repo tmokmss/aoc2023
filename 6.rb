@@ -42,7 +42,10 @@ pp distance
 # k**2 -tk + d < 0
 # k = (t+-sqrt(t**2-4*d))/2
 
-minwin = ((time - Math.sqrt(time**2 - 4*distance))/2.0).ceil
-maxwin = ((time + Math.sqrt(time**2 - 4*distance))/2.0).floor
+minwin = ((time - Math.sqrt(time**2 - 4 * distance)) / 2.0).ceil
+maxwin = ((time + Math.sqrt(time**2 - 4 * distance)) / 2.0).floor
 
-pp maxwin-minwin +1
+pp maxwin - minwin + 1
+
+# brute force :(
+pp (0..time).filter { |x| dist(x, time) > distance }.count
