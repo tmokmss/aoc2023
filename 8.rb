@@ -57,4 +57,7 @@ count =
   end
 
 pp count
+s = seq.size
+pp count.map { _1 % s }
 pp count.inject(:lcm)
+pp count.inject(:lcm) % seq.size
