@@ -24,7 +24,16 @@ end
 #   # some process using arr[xx][yy]
 # end
 def around8(x = 0, y = 0)
-  [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]].map { |dx, dy| [x + dx, y + dy] }
+  [
+    [-1, -1],
+    [-1, 0],
+    [-1, 1],
+    [0, -1],
+    [0, 1],
+    [1, -1],
+    [1, 0],
+    [1, 1]
+  ].map { |dx, dy| [x + dx, y + dy] }
 end
 
 def around4(x = 0, y = 0)
@@ -33,4 +42,8 @@ end
 
 def array2d(width, height, value = 0)
   Array.new(height) { Array.new(width) { value } }
+end
+
+def pp2d(matrix)
+  puts matrix.map { _1.join("") }.join("\n")
 end
