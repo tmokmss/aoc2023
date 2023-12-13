@@ -44,14 +44,6 @@ def array2d(width, height, value = 0)
   Array.new(height) { Array.new(width) { value } }
 end
 
-def transpose(matrix)
-  newm = array2d(matrix.size, matrix[0].size)
-  (0...matrix.size).each do |i|
-    (0...matrix[0].size).each { |j| newm[j][i] = matrix[i][j] }
-  end
-  newm
-end
-
 def pp2d(matrix)
   puts matrix.map { _1.join("") }.join("\n")
 end

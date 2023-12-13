@@ -46,7 +46,7 @@ end
 
 def find_reflection_row_col(matrix)
   row = find_reflection(matrix)
-  col = find_reflection(transpose(matrix))
+  col = find_reflection(matrix.transpose)
   [row, col]
 end
 
