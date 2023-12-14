@@ -47,3 +47,7 @@ end
 def pp2d(matrix)
   puts matrix.map { _1.join("") }.join("\n")
 end
+
+def clone_array(array)
+  Marshal.load(Marshal.dump(array))
+end
