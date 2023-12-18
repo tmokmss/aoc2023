@@ -47,7 +47,7 @@ sdir =
   end
 
 pp sdir
-distances = array2d(parsed.size, parsed[0].size, Float::INFINITY)
+distances = array2d(parsed[0].size, parsed.size, Float::INFINITY)
 distances[start[0]][start[1]] = 0
 # clockwise
 curr = start
@@ -90,20 +90,21 @@ end
 # pp distances
 pp distances.flatten.filter { _1 != Float::INFINITY }.max
 
-def contains(vertices, point)
-  # use pick's theorem
-  
-
-end
-
-pp vertices
+# pp vertices
 ans2 = 0
-(1...parsed.size-1).each do |i|
-  (1...parsed[0].size-1).each do |j|
-    if contains(vertices, [i, j])
-      ans2 += 1
-    end
-  end
+vertices.push(vertices[0])
+area = 0
+edge = 0
+(0...vertices.size - 1).each do |i|
+  p0 = vertices[i]
+  p1 = vertices[i + 1]
+  area += (p0[1] + p1[1]) * (-p0[0] + p1[0])
+  edge += (p0[0] - p1[0]).abs
+  edge += (p0[1] - p1[1]).abs
 end
-
+edge += 1
+area = (area / 2).abs
+pp area
+pp edge
+ans2 = area - edge / 2 + 1
 pp ans2
